@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ff-diamond-bot
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node bot.js
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        value: your-telegram-bot-token
+      - key: OPENAI_API_KEY
+        value: your-openai-api-key
+      - key: ADMIN_ID
+        value: "your-admin-id"
+      - key: WEBHOOK_URL
+        value: https://your-app-name.onrender.com
+      - key: PORT
+        value: "2229"
